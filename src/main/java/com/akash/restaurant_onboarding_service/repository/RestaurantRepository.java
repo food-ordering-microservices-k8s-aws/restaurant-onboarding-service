@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
  * Date: 14/11/25
  */
 @Repository
-public interface RestaurantRepository extends JpaRepository<Restaurant, Integer> {
+public interface RestaurantRepository extends JpaRepository<Restaurant, Long> {
 }

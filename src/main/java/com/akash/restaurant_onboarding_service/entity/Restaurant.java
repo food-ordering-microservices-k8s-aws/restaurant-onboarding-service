@@ -20,7 +20,7 @@ public class Restaurant extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
     private String name;
     private String address;
     private String city;
