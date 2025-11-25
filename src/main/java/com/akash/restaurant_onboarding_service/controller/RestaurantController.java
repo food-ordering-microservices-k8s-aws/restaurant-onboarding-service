@@ -13,6 +13,7 @@ import java.util.List;
  * Author: akash
  * Date: 14/11/25
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/restaurant")
 public class RestaurantController {
@@ -35,7 +36,7 @@ public class RestaurantController {
     }
 
     @GetMapping("getById/{id}")
-    public ResponseEntity<RestaurantDTO> findRestaurantById(@PathVariable Integer id) {
+    public ResponseEntity<RestaurantDTO> findRestaurantById(@PathVariable Long id) {
         return restaurantService.getRestaurantById(id);
     }
 

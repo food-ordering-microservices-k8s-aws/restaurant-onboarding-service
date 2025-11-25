@@ -35,7 +35,7 @@ public class RestaurantService {
         return RestaurantMapper.INSTANCE.mapRestaurantToRestaurantDTO(savedRestaurant);
     }
 
-    public ResponseEntity<RestaurantDTO> getRestaurantById(Integer id) {
+    public ResponseEntity<RestaurantDTO> getRestaurantById(Long id) {
         Optional<Restaurant> restaurant =  restaurantRepo.findById(id);
         if(restaurant.isPresent()){
             return new ResponseEntity<>(RestaurantMapper.INSTANCE.mapRestaurantToRestaurantDTO(restaurant.get()), HttpStatus.OK);
